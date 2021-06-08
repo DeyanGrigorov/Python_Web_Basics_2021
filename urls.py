@@ -19,7 +19,7 @@ from python_web_basics_2021.cities.views import index, list_phones
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('python_web_basics_2021.cities.urls')),
+    path('cities/', include('python_web_basics_2021.cities.urls')),
     path('', include('python_web_basics_2021.people.urls')),
     ]
 

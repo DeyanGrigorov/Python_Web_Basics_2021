@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from python_web_basics_2021.cities.models import Person
 
@@ -22,3 +22,12 @@ def list_phones(req):
     }
     return render(req, 'phones.html', context)
 
+
+def create_person(req):
+    Person(
+        name='Peshko',
+        age=11,
+        home_town="Svoge",
+
+    ).save()
+    return redirect('/cities')
