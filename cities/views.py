@@ -3,6 +3,10 @@ from django.http import HttpResponse
 from python_web_basics_2021.cities.models import Person
 
 
+def show_forms_demo(req):
+    return render(req, 'forms_demo.html')
+
+
 def index(req):
     context = {
         'name': 'Deyan',
